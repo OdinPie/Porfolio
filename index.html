@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>My Porfolio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <!--FontsAwesome-->
+        <script src="https://kit.fontawesome.com/373b7d1a3e.js" crossorigin="anonymous"></script>
+      <!--Google fonts-->  
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,800&display=swap" rel="stylesheet">
+       <!--CSS-->   
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+    
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <div class="bx bx-menu" id="menu-icon"><i class="fa-solid fa-rocket"></i></div>
+      <ul class="navbar">
+        <li><a href="#home" class="active">Home</a></li> 
+        <li><a href="#sec">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+       
+     </ul>
+    </header>
+    <section>
+      <img src="img/stars.png" id="stars">
+      <img src="img/moon.png" id="moon">
+      <img src="img/mountains_behind.png" id="mountains_behind">
+      <h2 id="text">Welcome!</h2>
+      <a href="#sec" id="btn">Explore</a>
+      <img src="img/mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+      <h2>About Me</h2>
+      <img src="img/self-01.png">
+      <p> Hey there! <br>I work as a freelance graphics designer <br>and currently learning to be a web developer</p>
+      <a href="#contact" id="btn_contact">Contact me!</a>
+    </div>
+  <hr>
+    <div class="skills" id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Graphics Designing</li>
+        <li>3D Graphics</li>
+        <li>Vector Animation</li>
+        <li>Digital Art</li>
+        <li>Content Writing</li>
+        <li>Web Development</li>
+        <li>Public Speaking</li>
+        <li>Leadership & Presentation skills</li>
+
+      </ul>
+    </div>
+    <hr>
+    <div class="service" id="service">
+      <h2>Service</h2>
+      <table>
+        <tr>
+          <th>Services</th>
+          <td>Basic 2D graphics with shapes and diagrams</td>
+          <td>Basic 2D graphics with 3D elements and effects</td>
+          <td>Complex graphics with vector designs and bodies<br>Basic Logo Design</td>
+          <td>Digitally illustrated portraits<br>Complex Logo Design</td>
+        </tr>
+        <tr>
+          <th>Remuneration(per work)</th>
+          <td>65Tk<br>Express: +20Tk</td>
+          <td>80Tk<br>Express: +30Tk</td>
+          <td>120Tk<br>Express: +50Tk</td>
+          <td>500Tk<br>Express: +200Tk</td>
+        </tr>
+
+        <tr>
+          <th>Free Source File (any format)</th>
+          <td> ✔️</td>
+          <td> ✔️</td>
+          <td> ✔️</td>
+          <td> ✔️</td>
+        </tr>
+        
+        <tr>
+          <tr>
+            <th>Unlimited Revision</th>
+            <td> ✔️</td>
+            <td> ✔️</td>
+            <td> ✔️</td>
+            <td> ✔️</td>
+          </tr>
+        </tr>
+        <tr>
+          <th>Delivery Time</th>
+          <td>1 day (max 6 works)</td>
+          <td>1 day (max 6 works)</td>
+          <td>1 day (max 4 works)</td>
+          <td>2-3 days </td>
+        </tr>
+      </table>
+      <a href="#contact" id="btn_contact">Contact me!</a>
+    </div>
+    <hr>
+    <div class="contact" id="contact">
+      <h2>Contact</h2>
+      <p><i class="conicon fa-solid fa-phone"></i>01640068288</p>
+      <p><i class="conicon fa-regular fa-envelope"></i>maliha16tabassum@gmail.com</p>
+    </div>
+
+<!------Javascript----->
+<script type="text/javascript" src="js/script.js"></script>
+
+   <script>
+          let stars = document.getElementById('stars');
+      let moon = document.getElementById('moon');
+      let mountains_behind = document.getElementById('mountains_behind');
+      let mountains_front = document.getElementById('mountains_front');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function(){
+        let value = this.window.scrollY;
+        stars.style.left = value* 0.25 +'px';
+        moon.style.top = value* 1.05 +'px';
+        mountains_behind.style.top = value* 0.5 +'px';
+        mountains_front.style.top = value* 0 +'px';
+        text.style.marginRight = value* 4 +'px';
+        text.style.marginTop = value* 1.5 +'px';
+        btn.style.marginTop = value* 1.5 +'px';
+        header.style.marginTop = value* 0.5 +'px';
+        
+      })
+   </script>
+    
+      
+      
+   
+</body>
+</html>
